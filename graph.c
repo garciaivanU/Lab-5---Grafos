@@ -57,7 +57,7 @@ int getWeight(Graph* g, const char* label1, const char* label2) {
     
     while (nodoObjetivo != NULL) {
         if (!strcmp(nodoObjetivo->target, label2)) return nodoObjetivo->weight;
-        nodoObjtivo = list_next(listaNodoFuente);
+        nodoObjetivo = list_next(listaNodoFuente);
     }
     
     // Si no existe el origen o terminamos de iterar sin encontrar el destino
