@@ -30,3 +30,15 @@ graph.c:60:9: error: ‘nodoObjtivo’ undeclared (first use in this function); 
 graph.c:60:9: note: each undeclared identifier is reported only once for each function it appears in
 cc1: all warnings being treated as errors
 0da0644
+Fri May 15 07:22:22 PM UTC 2026: 
+ graph.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘getWeight’:
+graph.c:60:9: error: ‘nodoObjtivo’ undeclared (first use in this function); did you mean ‘nodoObjetivo’?
+   60 |         nodoObjtivo = list_next(listaNodoFuente);
+      |         ^~~~~~~~~~~
+      |         nodoObjetivo
+graph.c:60:9: note: each undeclared identifier is reported only once for each function it appears in
+e009208
