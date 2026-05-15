@@ -10,3 +10,23 @@ Fri May 15 06:37:10 PM UTC 2026:
  tests:  0|6
 ========================================
 967fdeb
+Fri May 15 07:21:26 PM UTC 2026: 
+ graph.c | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘getWeight’:
+graph.c:52:55: error: passing argument 2 of ‘map_search’ discards ‘const’ qualifier from pointer target type [-Werror=discarded-qualifiers]
+   52 |     MapPair* nodoFuente = map_search(g->adjacencyMap, label1);
+      |                                                       ^~~~~~
+In file included from graph.c:8:
+map.h:22:37: note: expected ‘void *’ but argument is of type ‘const char *’
+   22 | MapPair *map_search(Map *map, void *key);
+      |                               ~~~~~~^~~
+graph.c:60:9: error: ‘nodoObjtivo’ undeclared (first use in this function); did you mean ‘nodoObjetivo’?
+   60 |         nodoObjtivo = list_next(listaNodoFuente);
+      |         ^~~~~~~~~~~
+      |         nodoObjetivo
+graph.c:60:9: note: each undeclared identifier is reported only once for each function it appears in
+cc1: all warnings being treated as errors
+0da0644
