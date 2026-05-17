@@ -96,3 +96,20 @@ graph.c:21:5: note: declared here
    21 | int is_equal_string(void *key1, void *key2) {
       |     ^~~~~~~~~~~~~~~
 850f7de
+Sun May 17 05:19:00 AM UTC 2026: 
+ graph.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘createGraph’:
+graph.c:32:32: error: implicit declaration of function ‘create_map’; did you mean ‘createGraph’? [-Wimplicit-function-declaration]
+   32 |     nuevoGrafo->adjacencyMap = create_map(is_equal_string());
+      |                                ^~~~~~~~~~
+      |                                createGraph
+graph.c:32:43: error: too few arguments to function ‘is_equal_string’
+   32 |     nuevoGrafo->adjacencyMap = create_map(is_equal_string());
+      |                                           ^~~~~~~~~~~~~~~
+graph.c:21:5: note: declared here
+   21 | int is_equal_string(void *key1, void *key2) {
+      |     ^~~~~~~~~~~~~~~
+013d90a
