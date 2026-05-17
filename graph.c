@@ -45,7 +45,7 @@ void addEdge(Graph* g, const char* src, const char* dest, int weight) {
     Edge* nodoDestino = (Edge*) malloc(sizeof(Edge));
     if (nodoDestino == NULL) exit(EXIT_FAILURE);
 
-    strcpy(nodoDestino->target, dest);
+    strcpy(nodoDestino->target, (char*)dest);
     nodoDestino->weight = weight;
     list_pushBack(nodoFuente->value, nodoDestino);
 }
