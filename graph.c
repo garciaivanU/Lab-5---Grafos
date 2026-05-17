@@ -29,7 +29,7 @@ int is_equal_string(void *key1, void *key2) {
 Graph* createGraph() {
     Graph* nuevoGrafo = (Graph*) malloc(sizeof(Graph));
     if (nuevoGrafoo == NULL) exit(EXIT_FAILURE);
-    nuevoGrafo->adjancecyMap = create_map(is_equal_string());
+    nuevoGrafo->adjacencyMap = create_map(is_equal_string());
     return nuevoGrafo;
 }
 
