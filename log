@@ -172,3 +172,20 @@ Sun May 17 05:37:29 AM UTC 2026:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 3ab7a5e
+Sun May 17 05:42:03 AM UTC 2026: 
+ graph.c | 6 ++++++
+ 1 file changed, 6 insertions(+)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addEdge’:
+graph.c:44:5: error: unknown type name ‘mapPair’; did you mean ‘MapPair’?
+   44 |     mapPair* nodoFuente = map_search(g->adjacencyMap, (char*)src);
+      |     ^~~~~~~
+      |     MapPair
+graph.c:44:27: error: initialization of ‘int *’ from incompatible pointer type ‘MapPair *’ [-Wincompatible-pointer-types]
+   44 |     mapPair* nodoFuente = map_search(g->adjacencyMap, (char*)src);
+      |                           ^~~~~~~~~~
+graph.c:50:29: error: request for member ‘value’ in something not a structure or union
+   50 |     list_pushBack(nodoFuente->value, nodoDestino);
+      |                             ^~
+b60ac96
