@@ -126,3 +126,24 @@ graph.c:21:5: note: declared here
    21 | int is_equal_string(void *key1, void *key2) {
       |     ^~~~~~~~~~~~~~~
 cb2bed1
+Sun May 17 05:19:41 AM UTC 2026: 
+ graph.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘createGraph’:
+graph.c:32:58: error: expected ‘)’ before ‘;’ token
+   32 |     nuevoGrafo->adjacencyMap = map_create(is_equal_string;
+      |                                          ~               ^
+      |                                                          )
+graph.c:33:23: error: expected ‘;’ before ‘}’ token
+   33 |     return nuevoGrafo;
+      |                       ^
+      |                       ;
+   34 | }
+      | ~                      
+graph.c:34:1: error: control reaches end of non-void function [-Werror=return-type]
+   34 | }
+      | ^
+cc1: all warnings being treated as errors
+73205bf
