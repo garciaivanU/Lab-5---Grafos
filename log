@@ -189,3 +189,17 @@ graph.c:50:29: error: request for member ‘value’ in something not a structur
    50 |     list_pushBack(nodoFuente->value, nodoDestino);
       |                             ^~
 b60ac96
+Sun May 17 05:43:31 AM UTC 2026: 
+ graph.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addEdge’:
+graph.c:50:31: error: expected identifier before ‘,’ token
+   50 |     list_pushBack(nodoFuente->, nodoDestino);
+      |                               ^
+graph.c:44:14: error: variable ‘nodoFuente’ set but not used [-Werror=unused-but-set-variable]
+   44 |     MapPair* nodoFuente = map_search(g->adjacencyMap, (char*)src);
+      |              ^~~~~~~~~~
+cc1: all warnings being treated as errors
+1e1e4ad
